@@ -18,7 +18,7 @@ https://fasttext.cc/
 Currently, the project uses Smithsonian biodiversity data published as a Darwin Core Archive (DwC-A), which is a standardized format for sharing biodiversity data as a set of one or more data tables. The core data table contains 194517 records and 72 fields.
 Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
 
-## Process (update)
+## Process (updated)
 1. selecting 5 fields in the core data table.
    - collectionCode: contains 7 different values, "Invertebrate Zoology", "Fishes", "Amphibian %26 Reptiles", "Birds", "Botany", "Entomology" and "Mammals".
    - habitat: the habitat of the record sample.
