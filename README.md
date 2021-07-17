@@ -19,13 +19,12 @@ Currently, the project uses Smithsonian biodiversity data published as a Darwin 
 Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
 
 ## Process (update)
-1. selecting 4 fields in the core data table.
+1. selecting 5 fields in the core data table.
    - collectionCode: contains 7 different values, "Invertebrate Zoology", "Fishes", "Amphibian %26 Reptiles", "Birds", "Botany", "Entomology" and "Mammals".
    - habitat: the habitat of the record sample.
    - higherGeography: the broad geography information.
    - locality: the location where the record was found in detail.
-   **New** using the new field "higherClassification"
-   - higherClassification: the taxom of the records.
+   - **New field:** higherClassification: the taxon of the records. 
 2. Manually mapping the top 149 DwC-A records to iSamples sampledFeature with at most 2 sampledFeature labels as the simple cases according to the 4 field we chose.
    - convert the 119 mapping records to fastText format as simple_trainSet. [simple_trainSet](data/DwC_simple.train)
    - convert the 30 mapping records to fastText format as testSet. [testSet](data/DwC_simple.valid)
@@ -38,7 +37,7 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
 5. use the trainSet and fastText pretrain word vector(crawl-300d-2M-subword.vec) to train a fastText supervised models.
    - training the fastText model with different parameters (learning rate: [0.1, 0.5, 1]; epoch: [5, 10, 15, 20, 25]; k: [1, 2, 3, 4, 5]) might have different performances (precision and recall). [Performances.ipynb](python/Performances.ipynb) will store the performances information into [simple_performance.csv](data/Performance_result/simple_performance.csv), [difficult_performance.csv](data/Performance_result/difficult_performance.csv) and [steve_performance.csv](data/Performance_result/steve_performance.csv).
    - **Result:** The results show the different parameters have no obvious effect on improving performances for DwC_simple.train and DwC_difficult.train because the trainset is too small. 
-   - **New Result** For the steve trainset, we found learning rate (0.5) and epoch (20) work best for the model. So, we chose these parameter to train the fasttext model to predict the different collections' records.
+   - **New Result:** For the steve trainset, we found learning rate (0.5) and epoch (20) work best for the model. So, we chose these parameter to train the fasttext model to predict the different collections' records.
 6. using the model trained by simple_trainSet to determine which collection contains the hardest data for machine to predict. Each file has 50 records.
    - [Amphibians_predict.txt](data/Collection_predict/Amphibians_predict.txt)
    - [Birds_predict.txt](data/Collection_predict/Birds_predict.txt)
@@ -48,8 +47,8 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
    - [Mammals_predict.txt](data/Collection_predict/Mammals_predict.txt)
    - [zoology_predict.txt](data/Collection_predict/zoology_predict.txt)
 7. [CollectionPredict.ipynb](python/CollectionPredict.ipynb) predicts the 7 collection records and calculates the average probabilities.
-   - the fastText model trained by steve_696.train file with learning rate (0.5) and epoch (20)
-   - **Result:** The results show the Fish collection records are the hardest records to be categorized by fastText model. [Probability results for the different collections](data/Collection Result/Sum_Result.csv)
+   - **New** the fastText model trained by steve_696.train file with learning rate (0.5) and epoch (20)
+   - **New result:** The results show the Fish collection records are the hardest records to be categorized by fastText model. [Probability results for the different collections](data/Collection Result/Sum_Result.csv)
 
 ## Prerequisites
   Download pretrained word vector file "crawl_300d-2M-subword.zip" from https://fasttext.cc/docs/en/english-vectors.html
@@ -76,9 +75,9 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
             ``` 
       - [Collection Result folder](data/Collection_result)
          - contains predict results for different collections.
-      - [Performance result folder](data/Performance result)
+      - [Performance result folder](data/Performance_result)
          - contains all performance results for the different trainSet with the different train paramaters.
-      - [Raw data folder](data/Raw data)
+      - [Raw data folder](data/Raw_data)
          - contains all raw data without data preprocessing
   2. [python](python)
        - contains two jupyter files.
