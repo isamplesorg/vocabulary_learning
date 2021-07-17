@@ -83,7 +83,7 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
   2. [python](python)
        - contains two jupyter files.
          - [Performances.ipynb](python/Performances.ipynb) will train different models with different parameters and store data into simple_performance.csv and difficult_performance.csv in the data folder.
-         - [CollectionPredict.ipynb](python/CollectionPredict.ipynb) will train fastText models with DwC_simple.train and predict DwC collection records.
+         - [CollectionPredict.ipynb](python/ColletionPredict.ipynb) will train fastText models with DwC_simple.train and predict DwC collection records.
          - **New** [dataPreprocessing.ipynb](python/dataPreprocessing.ipynb) is the example code to show how to clean up the raw data.
   3. [R folder](R)
        - contains R code for basic data preprocessing and fastText model training.
