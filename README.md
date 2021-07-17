@@ -36,17 +36,17 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
    - randomly select 70% (696) records as trainSet. [steve_696.train](FastText/data/steve_696.train)
    - rest 30% (299) records as testSet. [steve_299.valid](FastText/data/steve_299.valid)
 5. use the trainSet and fastText pretrain word vector(crawl-300d-2M-subword.vec) to train a fastText supervised models.
-   - training the fastText model with different parameters (learning rate: [0.1, 0.5, 1]; epoch: [5, 10, 15, 20, 25]; k: [1, 2, 3, 4, 5]) might have different performances (precision and recall). [Performances.ipynb](FastText/python/Performances.ipynb) will store the performances information into [simple_performance.csv](FastText/data/Performance result/simple_performance.csv), [difficult_performance.csv](FastText/data/Performance result/difficult_performance.csv) and [steve_performance.csv](FastText/data/Performance result/steve_performance.csv).
+   - training the fastText model with different parameters (learning rate: [0.1, 0.5, 1]; epoch: [5, 10, 15, 20, 25]; k: [1, 2, 3, 4, 5]) might have different performances (precision and recall). [Performances.ipynb](FastText/python/Performances.ipynb) will store the performances information into [simple_performance.csv](FastText/data/Performance_result/simple_performance.csv), [difficult_performance.csv](FastText/data/Performance_result/difficult_performance.csv) and [steve_performance.csv](FastText/data/Performance_result/steve_performance.csv).
    - **Result:** The results show the different parameters have no obvious effect on improving performances for DwC_simple.train and DwC_difficult.train because the trainset is too small. 
    - **New Result** For the steve trainset, we found learning rate (0.5) and epoch (20) work best for the model. So, we chose these parameter to train the fasttext model to predict the different collections' records.
 6. using the model trained by simple_trainSet to determine which collection contains the hardest data for machine to predict. Each file has 50 records.
-   - [Amphibians_predict.txt](FastText/data/Collection predict set/Amphibians_predict.txt)
-   - [Birds_predict.txt](FastText/data/Collection predict set/Birds_predict.txt)
-   - [Botany_predict.txt](FastText/data/Collection predict set/Botany_predict.txt)
-   - [Entomology_predict.txt](FastText/data/Collection predict set/Entomology_predict.txt)
-   - [Fishes_predict.txt](FastText/data/Collection predict set/Fishes_predict.txt)
-   - [Mammals_predict.txt](FastText/data/Collection predict set/Mammals_predict.txt)
-   - [zoology_predict.txt](FastText/data/Collection predict set/zoology_predict.txt)
+   - [Amphibians_predict.txt](FastText/data/Collection_predict/Amphibians_predict.txt)
+   - [Birds_predict.txt](FastText/data/Collection_predict/Birds_predict.txt)
+   - [Botany_predict.txt](FastText/data/Collection_predict/Botany_predict.txt)
+   - [Entomology_predict.txt](FastText/data/Collection_predict/Entomology_predict.txt)
+   - [Fishes_predict.txt](FastText/data/Collection_predict/Fishes_predict.txt)
+   - [Mammals_predict.txt](FastText/data/Collection_predict/Mammals_predict.txt)
+   - [zoology_predict.txt](FastText/data/Collection_predict/zoology_predict.txt)
 7. [CollectionPredict.ipynb](FastText/python/CollectionPredict.ipynb) predicts the 7 collection records and calculates the average probabilities.
    - the fastText model trained by steve_696.train file with learning rate (0.5) and epoch (20)
    - **Result:** The results show the Fish collection records are the hardest records to be categorized by fastText model. [Probability results for the different collections](FastText/data/Collection Result/Sum_Result.csv)
@@ -67,14 +67,14 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
           __label__your_label_1 this is the first text
           __label__your_label_2 this is the second text
           ```
-      - [Collection predict set folder](FastText/data/Collection predict set)
+      - [Collection predict set folder](FastText/data/Collection_predict)
          - contains the different collections records
          - format: (all texts are lowercase)
             ```
             this is the first predict text
             this is the second predict text
             ``` 
-      - [Collection Result folder](FastText/data/Collection Result)
+      - [Collection Result folder](FastText/data/Collection_result)
          - contains predict results for different collections.
       - [Performance result folder](FastText/data/Performance result)
          - contains all performance results for the different trainSet with the different train paramaters.
