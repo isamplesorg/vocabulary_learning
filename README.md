@@ -28,14 +28,14 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
 2. ~~Manually mapping the top 149 DwC-A records to iSamples sampledFeature with at most 2 sampledFeature labels as the simple cases according to the 4 field we chose.~~
    - ~~convert the 119 mapping records to fastText format as simple_trainSet. [simple_trainSet](data/DwC_simple.train)~~
    - ~~convert the 30 mapping records to fastText format as testSet. [testSet](data/DwC_simple.valid)~~
-3.~~Manually mapping other 60 DwC-A records that are hard to be mapped by students as the difficult cases (most records have more than one label).~~
+3. ~~Manually mapping other 60 DwC-A records that are hard to be mapped by students as the difficult cases (most records have more than one label).~~
    - ~~conbine the 60 difficult records and another 60 simple records to fastText fornatas difficult_trainSet. [difficult_trainSet](data/DwC_difficult.train)~~
 4. **New** Using [the new dataset](data/Raw data/steve_mapping_1000.csv) labeled by expert, Mr Steve to train the model.
    - Because of the new version of iSamples sampledFeature, we use [the new sampledFeature term](https://github.com/isamplesorg/metadata/blob/main/vocabulary/SampledFeatureDecisionTreeV20210703.pdf), please review.
    - randomly select 70% (696) records as trainSet. [steve_696.train](data/steve_696.train)
    - rest 30% (299) records as testSet. [steve_299.valid](data/steve_299.valid)
 5. use the trainSet and fastText pretrain word vector(crawl-300d-2M-subword.vec) to train a fastText supervised models.
-   - training the fastText model with different parameters (learning rate: [0.1, 0.5, 1]; epoch: [5, 10, 15, 20, 25]; k: [1, 2, 3, 4, 5]) might have different performances (precision and recall). [Performances.ipynb](python/Performances.ipynb) will store the performances information into [simple_performance.csv](data/Performance_result/simple_performance.csv), [difficult_performance.csv](data/Performance_result/difficult_performance.csv) and [steve_performance.csv](data/Performance_result/steve_performance.csv).
+   - training the fastText model with different parameters (learning rate: [0.1, 0.5, 1]; epoch: [5, 10, 15, 20, 25]; k: [1, 2, 3, 4, 5]) might have different performances (precision and recall). [Performances.ipynb](python/Performances.ipynb) will store the performances information into ~~[simple_performance.csv](data/Performance_result/simple_performance.csv), [difficult_performance.csv](data/Performance_result/difficult_performance.csv)~~ and [steve_performance.csv](data/Performance_result/steve_performance.csv).
    - **Result:** The results show the different parameters have no obvious effect on improving performances for DwC_simple.train and DwC_difficult.train because the trainset is too small. 
    - **New Result:** For the steve trainset, we found learning rate (0.5) and epoch (20) work best for the model. So, we chose these parameter to train the fasttext model to predict the different collections' records.
 6. using the model trained by simple_trainSet to determine which collection contains the hardest data for machine to predict. Each file has 50 records.
