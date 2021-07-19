@@ -1,51 +1,51 @@
-invertebrate zoology  north pacific ocean juan de fuca ridge middle valley
-invertebrate zoology  north pacific ocean united states california los angeles county usa california los angeles county port of los angeles
-invertebrate zoology  united states tennessee sumner county east fork of bledsoe creek on rogana road
-invertebrate zoology  north atlantic ocean united states florida st lucie county fort pierce inlet
-invertebrate zoology  north pacific ocean kaneohe bay united states hawaii honolulu county patch reef 14 windward side
-invertebrate zoology  north pacific ocean gulf of california mexico t548
-invertebrate zoology  united states tennessee warren county 
-invertebrate zoology  north pacific ocean east pacific rise
-invertebrate zoology  north pacific ocean united states oregon coos county qochyax island
-invertebrate zoology  north atlantic ocean united states bear seamount east of seamount
-invertebrate zoology  united states tennessee bedford county north fork creek at poplins crossroads
-invertebrate zoology   td8
-invertebrate zoology  north atlantic ocean united states florida st lucie county fort pierce inlet
-invertebrate zoology  north pacific ocean san clemente seep
-invertebrate zoology  south pacific ocean french polynesia society islands moorea society islands moorea north of vaiare pass off sofitel
-invertebrate zoology  north atlantic ocean chesapeake bay united states virginia northampton county lower chesapeake bay cape charles beach just n of fishing pier along jetty
-invertebrate zoology  united states nevada white pine county ruby mountains overland pass
-invertebrate zoology  north pacific ocean gulf of california mexico d392
-invertebrate zoology  north pacific ocean united states california t208
-invertebrate zoology  united states arkansas van buren county off highway 9 east side of choctaw creek
-invertebrate zoology  north pacific ocean united states california t644
-invertebrate zoology  south pacific ocean french polynesia off channel mpa marker
-invertebrate zoology  united states mississippi pontotoc county town creek upstream of ms highway 9
-invertebrate zoology  north pacific ocean united states washington kitsap county hood canal central
-invertebrate zoology  north pacific ocean united states california monterey canyon
-invertebrate zoology  south pacific ocean papua new guinea illi illi bua bua coral
-invertebrate zoology  north pacific ocean united states california v1676
-invertebrate zoology  south pacific ocean french polynesia society islands moorea 
-invertebrate zoology  united states illinois hardin county big creek at iron furnace
-invertebrate zoology  north pacific ocean east pacific rise at 9north biotransect
-invertebrate zoology  united states west virginia grant county 99 miles northeast of petersburg on us hwy 220
-invertebrate zoology  north atlantic ocean midatlantic ridge  menez gwen
-invertebrate zoology  north atlantic ocean united states florida fort pierce inlet
-invertebrate zoology  united states arkansas crawford county lee creek river ford creek road
-invertebrate zoology  french polynesia iles sous le vent tahiti pueu pueu river
-invertebrate zoology  north atlantic ocean united states florida st lucie county fort pierce inlet
-invertebrate zoology  north pacific ocean united states california v1676
-invertebrate zoology  united states mississippi tippah county little hatchie river upstream of county road 253
-invertebrate zoology  north atlantic ocean united states maryland eastern shore
-invertebrate zoology  south pacific ocean saguaro field sepr
-invertebrate zoology  north pacific ocean united states california monterey canyon
-invertebrate zoology  north pacific ocean mariana trough
-invertebrate zoology  north atlantic ocean united states florida st lucie county fort pierce inlet
-invertebrate zoology  north atlantic ocean united states virginia accomack county cedar island backside sandflats
-invertebrate zoology  north pacific ocean united states hawaii 
-invertebrate zoology  north pacific ocean united states oregon coos county 114 miles west of cape arago
-invertebrate zoology  north atlantic ocean chesapeake bay united states virginia northampton county lower chesapeake bay cape charles beach just n of fishing pier along jetty
-invertebrate zoology  north atlantic ocean united states florida duval county st johns river reddie point
-invertebrate zoology  north pacific ocean united states oregon off nehalem
-invertebrate zoology  south pacific ocean french polynesia society islands moorea society islands moorea north of vaiare pass off sofitel
-invertebrate zoology  united states georgia floyd county armuchee creek at little texas valley road
+invertebrate zoology  north pacific ocean juan de fuca ridge middle valley animalia annelida polychaeta sedentaria canalipalpata sabellida siboglinidae
+invertebrate zoology  north pacific ocean united states california los angeles county usa california los angeles county port of los angeles animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cancridae
+invertebrate zoology  united states tennessee sumner county east fork of bledsoe creek on rogana road animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae
+invertebrate zoology  north atlantic ocean united states florida st lucie county fort pierce inlet animalia annelida polychaeta sedentaria canalipalpata terebellida cirratuliformia cirratulidae
+invertebrate zoology  north pacific ocean kaneohe bay united states hawaii honolulu county patch reef 14 windward side animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata xanthidae
+invertebrate zoology  north pacific ocean gulf of california mexico t548 animalia mollusca bivalvia vesicomyidae
+invertebrate zoology  united states tennessee warren county  animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae
+invertebrate zoology  north pacific ocean east pacific rise animalia annelida polychaeta sedentaria canalipalpata sabellida siboglinidae
+invertebrate zoology  north pacific ocean united states oregon coos county qochyax island animalia mollusca gastropoda aldisidae
+invertebrate zoology  north atlantic ocean united states bear seamount east of seamount animalia mollusca cephalopoda coleoidea octopodida bolitaenidae
+invertebrate zoology  united states tennessee bedford county north fork creek at poplins crossroads animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae
+invertebrate zoology   td8 animalia annelida polychaeta sedentaria canalipalpata sabellida siboglinidae
+invertebrate zoology  north atlantic ocean united states florida st lucie county fort pierce inlet animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda
+invertebrate zoology  north pacific ocean san clemente seep animalia mollusca bivalvia vesicomyidae
+invertebrate zoology  south pacific ocean french polynesia society islands moorea society islands moorea north of vaiare pass off sofitel animalia annelida polychaeta errantia eunicida eunicidae
+invertebrate zoology  north atlantic ocean chesapeake bay united states virginia northampton county lower chesapeake bay cape charles beach just n of fishing pier along jetty animalia annelida polychaeta errantia phyllodocida nereidiformia nereididae
+invertebrate zoology  united states nevada white pine county ruby mountains overland pass animalia nematoda
+invertebrate zoology  north pacific ocean gulf of california mexico d392 animalia annelida polychaeta sedentaria canalipalpata sabellida siboglinidae
+invertebrate zoology  north pacific ocean united states california t208 animalia annelida polychaeta sedentaria canalipalpata sabellida siboglinidae
+invertebrate zoology  united states arkansas van buren county off highway 9 east side of choctaw creek animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae
+invertebrate zoology  north pacific ocean united states california t644 animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata
+invertebrate zoology  south pacific ocean french polynesia off channel mpa marker animalia arthropoda crustacea malacostraca eumalacostraca peracarida isopoda flabellifera cirolanidae
+invertebrate zoology  united states mississippi pontotoc county town creek upstream of ms highway 9 animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae
+invertebrate zoology  north pacific ocean united states washington kitsap county hood canal central animalia annelida polychaeta errantia eunicida onuphidae onuphinae
+invertebrate zoology  north pacific ocean united states california monterey canyon animalia mollusca bivalvia vesicomyidae
+invertebrate zoology  south pacific ocean papua new guinea illi illi bua bua coral animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata dromiidae
+invertebrate zoology  north pacific ocean united states california v1676 animalia mollusca bivalvia vesicomyidae
+invertebrate zoology  south pacific ocean french polynesia society islands moorea  animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata
+invertebrate zoology  united states illinois hardin county big creek at iron furnace animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae
+invertebrate zoology  north pacific ocean east pacific rise at 9north biotransect animalia annelida polychaeta sedentaria canalipalpata sabellida siboglinidae
+invertebrate zoology  united states west virginia grant county 99 miles northeast of petersburg on us hwy 220 animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae
+invertebrate zoology  north atlantic ocean midatlantic ridge  menez gwen animalia mollusca bivalvia mytilidae
+invertebrate zoology  north atlantic ocean united states florida fort pierce inlet animalia cnidaria hydrozoa leptolinae anthoathecatae capitata corynidae
+invertebrate zoology  united states arkansas crawford county lee creek river ford creek road animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae
+invertebrate zoology  french polynesia iles sous le vent tahiti pueu pueu river animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda
+invertebrate zoology  north atlantic ocean united states florida st lucie county fort pierce inlet animalia porifera
+invertebrate zoology  north pacific ocean united states california v1676 animalia mollusca bivalvia vesicomyidae
+invertebrate zoology  united states mississippi tippah county little hatchie river upstream of county road 253 animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae
+invertebrate zoology  north atlantic ocean united states maryland eastern shore animalia arthropoda crustacea malacostraca eumalacostraca peracarida amphipoda
+invertebrate zoology  south pacific ocean saguaro field sepr animalia mollusca bivalvia mytilidae
+invertebrate zoology  north pacific ocean united states california monterey canyon animalia mollusca bivalvia vesicomyidae
+invertebrate zoology  north pacific ocean mariana trough animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata bythograeidae
+invertebrate zoology  north atlantic ocean united states florida st lucie county fort pierce inlet animalia annelida polychaeta sedentaria canalipalpata spionida spioniformia spionidae
+invertebrate zoology  north atlantic ocean united states virginia accomack county cedar island backside sandflats animalia mollusca bivalvia heterodonta imparidentia cardiida tellinidae tellininae
+invertebrate zoology  north pacific ocean united states hawaii  animalia mollusca cephalopoda coleoidea decapodiformes oegopsida ommastrephidae ommastrephinae
+invertebrate zoology  north pacific ocean united states oregon coos county 114 miles west of cape arago animalia bryozoa
+invertebrate zoology  north atlantic ocean chesapeake bay united states virginia northampton county lower chesapeake bay cape charles beach just n of fishing pier along jetty animalia chordata urochordata ascidiacea pleurogona stolidobranchia botryllidae
+invertebrate zoology  north atlantic ocean united states florida duval county st johns river reddie point animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata palaemonidae
+invertebrate zoology  north pacific ocean united states oregon off nehalem animalia mollusca scaphopoda pulsellidae
+invertebrate zoology  south pacific ocean french polynesia society islands moorea society islands moorea north of vaiare pass off sofitel animalia annelida polychaeta errantia phyllodocida nereidiformia syllidae
+invertebrate zoology  united states georgia floyd county armuchee creek at little texas valley road animalia arthropoda crustacea malacostraca eumalacostraca eucarida decapoda pleocyemata cambaridae

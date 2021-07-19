@@ -1,51 +1,51 @@
-birds mixed second growthprimary evergreen forest asia myanmar kachin 
-birds  asia korea kyongii 
-birds ditch africa djibouti djibouti region 
-birds ridgeline above river in primary forest asia malaysia borneo sarawak 
-birds seasonally flooded palm forest south america guyana 
-birds  north america panama chiriqui 
-birds riparian white sand forest south america guyana 
-birds  south america peru tumbes 
-birds mossy hill forest south america guyana 
-birds ridgeline above river in primary forest asia malaysia borneo sarawak 
-birds primary forest africa gabon ogooue maritime province 
-birds  australia australia queensland 
-birds  north america panama bocas del toro 
-birds  south america brazil para 
-birds savannah south america guyana 
-birds  australia australia queensland 
-birds  australia australia new south wales 
-birds mud flat asia korea jeollabuk 
-birds 500 m wide valley with mixed riparian forest salix populus betula larix etc wet meadow on terrace pure larix forest on slopes with some betula along streams and lower edges of slopes asia russia chitinskaya oblast krasnochikoiskiy rayon 
-birds  north america panama bocas del toro 
-birds agricultural fields south america guyana 
-birds selectively logged forest south america guyana 
-birds open ground near scrub  manmade structures africa djibouti djibouti region 
-birds  south america argentina buenos aires 
-birds second growth africa gabon ogooue maritime province 
-birds shoreline africa djibouti djibouti region 
-birds ridgeline above river in primary forest asia malaysia borneo sarawak 
-birds tall second growth asia malaysia borneo sarawak 
-birds  locality unknown locality unknown 
-birds  north america united states washington island 
-birds ridgeline above river in primary forest asia malaysia borneo sarawak 
-birds  africa djibouti djibouti region 
-birds aspen and fir woodland recently burned north america united states california lassen 
-birds  south america brazil para 
-birds  africa djibouti arta region 
-birds  asia myanmar bago yedashe district  
-birds  asia korea jeollabuk 
-birds  australia australia victoria 
-birds  south america peru tumbes 
-birds  locality unknown locality unknown 
-birds  locality unknown locality unknown 
-birds  south america argentina tucuman province 
-birds second growth on disturbed rocky soil africa gabon ogooue maritime province 
-birds mosaic of humid forest with second growth at edges south america argentina misiones 
-birds  australia australia tasmania 
-birds mixed coniferous forest north america united states utah uintah 
-birds roosting on manmade structures africa djibouti djibouti region 
-birds  north america united states california sacramento 
-birds  north america united states virginia lee 
-birds 500 m wide valley with mixed riparian forest salix populus betula larix etc wet meadow on terrace pure larix forest on slopes with some betula along streams and lower edges of slopes asia russia chitinskaya oblast krasnochikoiskiy rayon 
-birds  south america uruguay artigas 
+birds mixed second growthprimary evergreen forest asia myanmar kachin  animalia chordata vertebrata aves passeriformes nectariniidae
+birds  asia korea kyongii  animalia chordata vertebrata aves passeriformes emberizidae emberizinae
+birds ditch africa djibouti djibouti region  animalia chordata vertebrata aves ciconiiformes ciconiidae
+birds ridgeline above river in primary forest asia malaysia borneo sarawak  animalia chordata vertebrata aves passeriformes nectariniidae
+birds seasonally flooded palm forest south america guyana  animalia chordata vertebrata aves apodiformes trochilidae
+birds  north america panama chiriqui  animalia chordata vertebrata aves passeriformes turdidae
+birds riparian white sand forest south america guyana  animalia chordata vertebrata aves columbiformes columbidae
+birds  south america peru tumbes  animalia chordata vertebrata aves passeriformes tyrannidae
+birds mossy hill forest south america guyana  animalia chordata vertebrata aves passeriformes formicariidae
+birds ridgeline above river in primary forest asia malaysia borneo sarawak  animalia chordata vertebrata aves passeriformes dicaeidae
+birds primary forest africa gabon ogooue maritime province  animalia chordata vertebrata aves passeriformes pycnonotidae
+birds  australia australia queensland  animalia chordata vertebrata aves caprimulgiformes podargidae
+birds  north america panama bocas del toro  animalia chordata vertebrata aves apodiformes trochilidae
+birds  south america brazil para  animalia chordata vertebrata aves caprimulgiformes caprimulgidae
+birds savannah south america guyana  animalia chordata vertebrata aves passeriformes emberizidae thraupinae
+birds  australia australia queensland  animalia chordata vertebrata aves gruiformes rallidae
+birds  australia australia new south wales  animalia chordata vertebrata aves columbiformes columbidae
+birds mud flat asia korea jeollabuk  animalia chordata vertebrata aves charadriiformes scolopacidae
+birds 500 m wide valley with mixed riparian forest salix populus betula larix etc wet meadow on terrace pure larix forest on slopes with some betula along streams and lower edges of slopes asia russia chitinskaya oblast krasnochikoiskiy rayon  animalia chordata vertebrata aves passeriformes sylviidae sylviinae
+birds  north america panama bocas del toro  animalia chordata vertebrata aves strigiformes strigidae
+birds agricultural fields south america guyana  animalia chordata vertebrata aves passeriformes furnariidae
+birds selectively logged forest south america guyana  animalia chordata vertebrata aves passeriformes tyrannidae
+birds open ground near scrub  manmade structures africa djibouti djibouti region  animalia chordata vertebrata aves caprimulgiformes caprimulgidae
+birds  south america argentina buenos aires  animalia chordata vertebrata aves anseriformes anatidae anserinae
+birds second growth africa gabon ogooue maritime province  animalia chordata vertebrata aves columbiformes columbidae
+birds shoreline africa djibouti djibouti region  animalia chordata vertebrata aves charadriiformes laridae
+birds ridgeline above river in primary forest asia malaysia borneo sarawak  animalia chordata vertebrata aves piciformes indicatoridae
+birds tall second growth asia malaysia borneo sarawak  animalia chordata vertebrata aves passeriformes irenidae
+birds  locality unknown locality unknown  animalia chordata vertebrata aves ciconiiformes ardeidae
+birds  north america united states washington island  animalia chordata vertebrata aves anseriformes anatidae anatinae
+birds ridgeline above river in primary forest asia malaysia borneo sarawak  animalia chordata vertebrata aves passeriformes timaliidae
+birds  africa djibouti djibouti region  animalia chordata vertebrata aves passeriformes estrildidae
+birds aspen and fir woodland recently burned north america united states california lassen  animalia chordata vertebrata aves passeriformes corvidae
+birds  south america brazil para  animalia chordata vertebrata aves caprimulgiformes caprimulgidae
+birds  africa djibouti arta region  animalia chordata vertebrata aves coraciiformes upupidae
+birds  asia myanmar bago yedashe district   animalia chordata vertebrata aves passeriformes dicruridae
+birds  asia korea jeollabuk  animalia chordata vertebrata aves galliformes phasianidae phasianinae
+birds  australia australia victoria  animalia chordata vertebrata aves psittaciformes psittacidae
+birds  south america peru tumbes  animalia chordata vertebrata aves passeriformes tyrannidae
+birds  locality unknown locality unknown  animalia chordata vertebrata aves psittaciformes psittacidae
+birds  locality unknown locality unknown  animalia chordata vertebrata aves psittaciformes psittacidae
+birds  south america argentina tucuman province  animalia chordata vertebrata aves strigiformes strigidae
+birds second growth on disturbed rocky soil africa gabon ogooue maritime province  animalia chordata vertebrata aves passeriformes nectariniidae
+birds mosaic of humid forest with second growth at edges south america argentina misiones  animalia chordata vertebrata aves passeriformes formicariidae
+birds  australia australia tasmania  animalia chordata vertebrata aves procellariiformes diomedeidae
+birds mixed coniferous forest north america united states utah uintah  animalia chordata vertebrata aves passeriformes sittidae
+birds roosting on manmade structures africa djibouti djibouti region  animalia chordata vertebrata aves columbiformes columbidae
+birds  north america united states california sacramento  animalia chordata vertebrata aves gruiformes gruidae
+birds  north america united states virginia lee  animalia chordata vertebrata aves passeriformes tyrannidae
+birds 500 m wide valley with mixed riparian forest salix populus betula larix etc wet meadow on terrace pure larix forest on slopes with some betula along streams and lower edges of slopes asia russia chitinskaya oblast krasnochikoiskiy rayon  animalia chordata vertebrata aves passeriformes turdidae
+birds  south america uruguay artigas  animalia chordata vertebrata aves caprimulgiformes caprimulgidae
