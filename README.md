@@ -25,11 +25,11 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
    - higherGeography: the broad geography information.
    - locality: the location where the record was found in detail.
    - **New field:** higherClassification: the taxon of the records. 
-2. Manually mapping the top 149 DwC-A records to iSamples sampledFeature with at most 2 sampledFeature labels as the simple cases according to the 4 field we chose.
-   - convert the 119 mapping records to fastText format as simple_trainSet. [simple_trainSet](data/DwC_simple.train)
-   - convert the 30 mapping records to fastText format as testSet. [testSet](data/DwC_simple.valid)
-3. Manually mapping other 60 DwC-A records that are hard to be mapped by students as the difficult cases (most records have more than one label).
-   - conbine the 60 difficult records and another 60 simple records to fastText fornatas difficult_trainSet. [difficult_trainSet](data/DwC_difficult.train)
+2. ~~Manually mapping the top 149 DwC-A records to iSamples sampledFeature with at most 2 sampledFeature labels as the simple cases according to the 4 field we chose.~~
+   - ~~convert the 119 mapping records to fastText format as simple_trainSet. [simple_trainSet](data/DwC_simple.train)~~
+   - ~~convert the 30 mapping records to fastText format as testSet. [testSet](data/DwC_simple.valid)~~
+3.~~Manually mapping other 60 DwC-A records that are hard to be mapped by students as the difficult cases (most records have more than one label).~~
+   - ~~conbine the 60 difficult records and another 60 simple records to fastText fornatas difficult_trainSet. [difficult_trainSet](data/DwC_difficult.train)~~
 4. **New** Using [the new dataset](data/Raw data/steve_mapping_1000.csv) labeled by expert, Mr Steve to train the model.
    - Because of the new version of iSamples sampledFeature, we use [the new sampledFeature term](https://github.com/isamplesorg/metadata/blob/main/vocabulary/SampledFeatureDecisionTreeV20210703.pdf), please review.
    - randomly select 70% (696) records as trainSet. [steve_696.train](data/steve_696.train)
