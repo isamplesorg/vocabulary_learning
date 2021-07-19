@@ -47,7 +47,7 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
    - [Mammals_predict.txt](data/Collection_predict/Mammals_predict.txt)
    - [zoology_predict.txt](data/Collection_predict/zoology_predict.txt)
 7. [CollectionPredict.ipynb](python/CollectionPredict.ipynb) predicts the 7 collection records and calculates the average probabilities.
-   - **New** the fastText model trained by steve_696.train file with learning rate (0.5) and epoch (20)
+   - **New:** the fastText model trained by steve_696.train file with learning rate (0.5) and epoch (20)
    - **New result:** The results show the Fish collection records are the hardest records to be categorized by fastText model. [Probability results for the different collections](data/Collection_result/Sum_Result.csv)
 
 ## Prerequisites
