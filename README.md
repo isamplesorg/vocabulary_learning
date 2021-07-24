@@ -66,25 +66,30 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
           __label__your_label_1 this is the first text
           __label__your_label_2 this is the second text
           ```
-      - [Collection predict set folder](data/Collection_predict)
+       - [Collection predict set folder](data/Collection_predict)
          - contains the different collections records
          - format: (all texts are lowercase)
             ```
             this is the first predict text
             this is the second predict text
             ``` 
-      - [Collection Result folder](data/Collection_result)
+       - [Collection Result folder](data/Collection_result)
          - contains predict results for different collections.
-      - [Performance result folder](data/Performance_result)
+       - [Performance result folder](data/Performance_result)
          - contains all performance results for the different trainSet with the different train paramaters.
-      - [Raw data folder](data/Raw_data)
+       - [Raw data folder](data/Raw_data)
          - contains all raw data without data preprocessing
-  2. [python](python)
+  2. [fasttext_interface](fasttext_interface)
+       - contains 3 files
+         - [trainModel.ipynb](fasttext_interface) will train a fasttext model and store the model as the file (sampledFeature.bin) for furture prediction.
+         - [sampledFeature.bin](fasttext_interface) is the fasttext file that can be loaded to predict text.
+         - [DwC_predict.py](fastext_interface) is the python interface to add sampledFeature field in the DwC records.  
+  3. [python](python)
        - contains two jupyter files.
          - [Performances.ipynb](python/Performances.ipynb) will train different models with different parameters and store data into simple_performance.csv and difficult_performance.csv in the data folder.
          - [CollectionPredict.ipynb](python/ColletionPredict.ipynb) will train fastText models with DwC_simple.train and predict DwC collection records.
          - **New** [dataPreprocessing.ipynb](python/dataPreprocessing.ipynb) is the example code to show how to clean up the raw data.
-  3. [R folder](R)
+  4. [R folder](R)
        - contains R code for basic data preprocessing and fastText model training.
 
 
