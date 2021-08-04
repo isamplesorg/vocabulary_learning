@@ -18,7 +18,7 @@ https://fasttext.cc/
 Currently, the project uses Smithsonian biodiversity data published as a Darwin Core Archive (DwC-A), which is a standardized format for sharing biodiversity data as a set of one or more data tables. The core data table contains 194517 records and 72 fields.
 Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
 
-## Process (updated)
+## Processes for Smithsonia (updated)
 1. selecting 5 fields in the core data table.
    - collectionCode: contains 7 different values, "Invertebrate Zoology", "Fishes", "Amphibian %26 Reptiles", "Birds", "Botany", "Entomology" and "Mammals".
    - habitat: the habitat of the record sample.
@@ -49,6 +49,11 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
 7. [CollectionPredict.ipynb](python/CollectionPredict.ipynb) predicts the 7 collection records and calculates the average probabilities.
    - **New:** the fastText model trained by steve_696.train file with learning rate (0.5) and epoch (20)
    - **New result:** The results show fasttext model could predict all collections' records with 95% average probability and more. [Probability results for the different collections](data/Collection_result/Sum_Result.csv)
+
+## Processes for SESAR
+1. Use data loading.ipynb to retrieve SESAR records from MARS. we would get [SESAR_5000_core.csv](Collections_data/SESAR_5000_core.csv) and [SESAR_5000_original.csv](Collections_data/SESAR_5000_orginal.csv)
+2. Use SESAR_preprocessing.ipynb to clean the SESAR records and convert them to different sets. [cleanedSESAR_materialType.txt](Collections_data/cleanedSESAR_materialType.txt), [cleanedSESAR_sampeldFeature.txt](Collections_data/cleanedSESAR_sampeldFeature.txt) and [cleanedSESAR_specimenType.txt](Collections_data/cleanedSESAR_specimenType.txt).
+3. Use crossValidation.ipynb to evaluate the models' precisions and recalls and draw the graphs of precision and recall.
 
 ## Prerequisites
   Download pretrained word vector file "crawl_300d-2M-subword.zip" from https://fasttext.cc/docs/en/english-vectors.html
@@ -87,9 +92,14 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
   3. [python](python)
        - contains two jupyter files.
          - [Performances.ipynb](python/Performances.ipynb) will train different models with different parameters and store data into simple_performance.csv and difficult_performance.csv in the data folder.
-         - [CollectionPredict.ipynb](python/ColletionPredict.ipynb) will train fastText models with DwC_simple.train and predict DwC collection records.
+         - [CollectionPredict.ipynb](python/ColletionPredict.ipynb) would train fastText models with DwC_simple.train and predict DwC collection records.
          - **New** [dataPreprocessing.ipynb](python/dataPreprocessing.ipynb) is the example code to show how to clean up the raw data.
+         - **New** [SESAR_preprocessing.ipynb](pyhon/SESAR_preprocessing.ipynb) shows how to clean SESAR records and convert them to three different sets.
+         - **New** data loading.ipynb would retrieve collections' records from Mars APIs.
+         - **New** [crossValidation.ipynb](python/crossValidation.ipynb) would use cross validation to evaluate the models' precisions and recalls.
   4. [R folder](R)
        - contains R code for basic data preprocessing and fastText model training.
+  5. [Collections_data](Collections_data)
+       - contains the data for other collections (SESAR, OpenContext)
 
 
