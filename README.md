@@ -12,7 +12,7 @@ This repository currently focuses on "SampledFeature". For SESAR, GEOME and open
 
 ## fastText
 fastText is an open-source, free, lightweight library that allows users to learn text representations and text classifiers. It works on standard, generic hardware. Models can later be reduced in size to even fit on mobile devices. To learn about fastText, please explore the link: 
-https://fasttext.cc/
+https://fasttext.cc/. (**NOTICE**: the fastText library might reture the same precision and recall when you use the "test" method to verify the test set. fastText library might have this bug. And fastText only calculates the micro average precision and recall.)
 
 ## DataSet
 Currently, the project uses Smithsonian biodiversity data published as a Darwin Core Archive (DwC-A), which is a standardized format for sharing biodiversity data as a set of one or more data tables. The core data table contains 194517 records and 72 fields.
@@ -24,20 +24,14 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
    - habitat: the habitat of the record sample.
    - higherGeography: the broad geography information.
    - locality: the location where the record was found in detail.
-   - **New field:** higherClassification: the taxon of the records. 
-2. ~~Manually mapping the top 149 DwC-A records to iSamples sampledFeature with at most 2 sampledFeature labels as the simple cases according to the 4 field we chose.~~
-   - ~~convert the 119 mapping records to fastText format as simple_trainSet. [simple_trainSet](data/DwC_simple.train)~~
-   - ~~convert the 30 mapping records to fastText format as testSet. [testSet](data/DwC_simple.valid)~~
-3. ~~Manually mapping other 60 DwC-A records that are hard to be mapped by students as the difficult cases (most records have more than one label).~~
-   - ~~conbine the 60 difficult records and another 60 simple records to fastText fornatas difficult_trainSet. [difficult_trainSet](data/DwC_difficult.train)~~
-4. **New** Using [the new dataset](data/Raw data/steve_mapping_1000.csv) labeled by expert, Mr Steve to train the model.
+   - higherClassification: the taxon of the records. 
+2. Using [the new dataset](data/Raw data/steve_mapping_1000.csv) labeled by expert, Mr Steve to train the model.
    - Because of the new version of iSamples sampledFeature, we use [the new sampledFeature term](https://github.com/isamplesorg/metadata/blob/main/vocabulary/SampledFeatureDecisionTreeV20210703.pdf), please review.
    - randomly select 70% (696) records as trainSet. [steve_696.train](data/steve_696.train)
    - rest 30% (299) records as testSet. [steve_299.valid](data/steve_299.valid)
-5. use the trainSet and fastText pretrain word vector(crawl-300d-2M-subword.vec) to train a fastText supervised models.
-   - training the fastText model with different parameters (learning rate: [0.1, 0.5, 1]; epoch: [5, 10, 15, 20, 25]; k: [1, 2, 3, 4, 5]) might have different performances (precision and recall). [Performances.ipynb](python/Performances.ipynb) will store the performances information into ~~[simple_performance.csv](data/Performance_result/simple_performance.csv), [difficult_performance.csv](data/Performance_result/difficult_performance.csv)~~ and [steve_performance.csv](data/Performance_result/steve_performance.csv).
-   - **Result:** The results show the different parameters have no obvious effect on improving performances for DwC_simple.train and DwC_difficult.train because the trainset is too small. 
-   - **New Result:** For the steve trainset, we found learning rate (0.5) and epoch (20) work best for the model. So, we chose these parameter to train the fasttext model to predict the different collections' records.
+3. use the trainSet and fastText pretrain word vector(crawl-300d-2M-subword.vec) to train a fastText supervised models.
+   - training the fastText model with different parameters (learning rate: [0.1, 0.5, 1]; epoch: [5, 10, 15, 20, 25]; k: [1, 2, 3, 4, 5]) might have different performances (precision and recall). [Performances.ipynb](python/Performances.ipynb) will store the performances information in the [Performance result folder](data/Performance_result)
+   - **Result:** For the steve trainset, we found learning rate (0.5) and epoch (20) work best for the model. So, we chose these parameter to train the fasttext model to predict the different collections' records.
 6. using the model trained by simple_trainSet to determine which collection contains the hardest data for machine to predict. Each file has 50 records.
    - [Amphibians_predict.txt](data/Collection_predict/Amphibians_predict.txt)
    - [Birds_predict.txt](data/Collection_predict/Birds_predict.txt)
@@ -50,14 +44,19 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
    - **New:** the fastText model trained by steve_696.train file with learning rate (0.5) and epoch (20)
    - **New result:** The results show fasttext model could predict all collections' records with 95% average probability and more. [Probability results for the different collections](data/Collection_result/Sum_Result.csv)
 
-## Processes for SESAR
-1. Use data loading.ipynb to retrieve SESAR records from MARS. we would get [SESAR_5000_core.csv](Collections_data/SESAR_5000_core.csv) and [SESAR_5000_original.csv](Collections_data/SESAR_5000_orginal.csv)
+## Processes for SESAR and openContext.
+1. Use data loading.ipynb to retrieve SESAR records from MARS. we would get [SESAR_5000_core.csv](Collections_data/SESAR_5000_core.csv) and [SESAR_5000_original.csv](Collections_data/SESAR_5000_orginal.csv). The same steps for openContext.
 2. Use SESAR_preprocessing.ipynb to clean the SESAR records and convert them to different sets. [cleanedSESAR_materialType.txt](Collections_data/cleanedSESAR_materialType.txt), [cleanedSESAR_sampeldFeature.txt](Collections_data/cleanedSESAR_sampeldFeature.txt) and [cleanedSESAR_specimenType.txt](Collections_data/cleanedSESAR_specimenType.txt).
-3. Use crossValidation.ipynb to evaluate the models' precisions and recalls and draw the graphs of precision and recall.
+3. [SESAR_preprocessing.ipynb](pyhon/SESAR_preprocessing.ipynb) and [openContext_preprocessing.ipynb](pyhon/openContext_preprocessing.ipynb) clean the records and converts data to fastText format. The files also draw the graphes of records' attributes distribution and iSamples control vocabularies's distributions. 
+   - **Result for SESAR:** The SESAR collection is sparse data. Only few attributes could be used for fastText. And, the current records transformers based on keywords rules. Therefore, the result precision and recall are great. 
+   - **Result for openContext:** The openContext original data is pretty straightful and the sampled feature for openContext is the same value, "Site of past human activities". The current iSamples core records of openContext are based on only one attribuate, "item category". Therefore, when we use fastText to verify the control vocabularies, the precision and recall are 100%.
+4. Use crossValidation.ipynb to evaluate the models' precisions and recalls and draw the graphs of precision and recall.
+
 
 ## Prerequisites
   Download pretrained word vector file "crawl_300d-2M-subword.zip" from https://fasttext.cc/docs/en/english-vectors.html
   And put "crawl-300d-2M-subword.vec" file in the data folder
+  (Alternative: "wiki-new-300d-1M-subword.vec.zip")
 
 ## FastText folders 
   1. [data folder](data)
@@ -90,11 +89,12 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
          - [sampledFeature.bin](fasttext_interface) is the fasttext file that can be loaded to predict text.
          - [DwC_predict.py](fastext_interface) is the python interface to add sampledFeature field in the DwC records.  
   3. [python](python)
-       - contains two jupyter files.
+       - contains several jupyter files.
          - [Performances.ipynb](python/Performances.ipynb) will train different models with different parameters and store data into simple_performance.csv and difficult_performance.csv in the data folder.
          - [CollectionPredict.ipynb](python/ColletionPredict.ipynb) would train fastText models with DwC_simple.train and predict DwC collection records.
          - **New** [dataPreprocessing.ipynb](python/dataPreprocessing.ipynb) is the example code to show how to clean up the raw data.
          - **New** [SESAR_preprocessing.ipynb](pyhon/SESAR_preprocessing.ipynb) shows how to clean SESAR records and convert them to three different sets.
+         - **New** [openContext_preprocessing.ipynb](pyhon/openContext_preprocessing.ipynb) shows how to clean openContext records and convert them to three different sets.
          - **New** data loading.ipynb would retrieve collections' records from Mars APIs.
          - **New** [crossValidation.ipynb](python/crossValidation.ipynb) would use cross validation to evaluate the models' precisions and recalls.
   4. [R folder](R)
