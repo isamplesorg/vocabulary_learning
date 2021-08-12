@@ -40,16 +40,16 @@ From investopedia (https://www.investopedia.com/terms/t/t-test.asp)
   1. [data folder](data)
        - contains all data we used. 
          - steve_mapping_1000.csv.
-  2. [dataPreprocessing]
+  2. [dataPreprocessing](dataPreprocessing)
        - contains 5 files
          - [dataPreprocessing_Full.ipynb] include all attribute, and remove one of the attribute
          - [dataPreprocessing_No_cc.ipynb] include all attribute except collectionCode, and remove one of the attribute
          - [dataPreprocessing_No_cc_ha.ipynb] include all attribute except collectionCode and habitat, and remove one of the attribute
          - [dataPreprocessing_No_cc_ha_hg.ipynb] only include locality and higherClassification, and remove one the attribute
          - [dataPreprocessing_No_cc_ha_hg_lo.ipynb] only include higherClassification
-  3. [crossValidation]
+  3. [crossValidation](crossValidation)
        - get the result from 2[dataPreprocessing] and use the filename to run this script
-  4. [trans](python)
+  4. [trans](trans)
        - contains two files.
         -[text.py] transfer data from dataPreprocessing to format that easier read by R scrpit
 	-[exa.txt] save the result from dataPreprocessing.
