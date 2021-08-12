@@ -1,0 +1,30 @@
+5 fold Cross Validation
+Precision: 0.79
+Recall: 0.7676
+5 fold Cross Validation
+Precision: 0.87
+Recall: 0.841
+5 fold Cross Validation
+Precision: 0.9
+Recall: 0.874
+5 fold Cross Validation
+Precision: 0.9175
+Recall: 0.8959
+5 fold Cross Validation
+Precision: 0.932
+Recall: 0.9087
+5 fold Cross Validation
+Precision: 0.9233
+Recall: 0.9023
+5 fold Cross Validation
+Precision: 0.9271
+Recall: 0.9052
+5 fold Cross Validation
+Precision: 0.9413
+Recall: 0.9206
+5 fold Cross Validation
+Precision: 0.9256
+Recall: 0.9056
+5 fold Cross Validation
+Precision: 0.9347
+Recall: 0.9154
