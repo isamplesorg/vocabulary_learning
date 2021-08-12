@@ -39,45 +39,19 @@ From investopedia (https://www.investopedia.com/terms/t/t-test.asp)
 ## FastText folders 
   1. [data folder](data)
        - contains all data we used. 
-         - files with suffix "csv" are used for viewing the records.
-         - files with suffix "txt" are used for models to predict labels.
-         - files with suffix "train" are the trainset. 
-         - files with suffix "valid" are the testset.
-       - format of train files and test files. For iSamples project, the texts are the combinations of selected fields' string. (all texts are lowercase)
-          ```
-          __label__your_label_1 this is the first text
-          __label__your_label_2 this is the second text
-          ```
-       - [Collection predict set folder](data/Collection_predict)
-         - contains the different collections records
-         - format: (all texts are lowercase)
-            ```
-            this is the first predict text
-            this is the second predict text
-            ``` 
-       - [Collection Result folder](data/Collection_result)
-         - contains predict results for different collections.
-       - [Performance result folder](data/Performance_result)
-         - contains all performance results for the different trainSet with the different train paramaters.
-       - [Raw data folder](data/Raw_data)
-         - contains all raw data without data preprocessing
-  2. [fasttext_interface](fasttext_interface)
-       - contains 3 files
-         - [trainModel.ipynb](fasttext_interface) will train a fasttext model and store the model as the file (sampledFeature.bin) for furture prediction.
-         - [sampledFeature.bin](fasttext_interface) is the fasttext file that can be loaded to predict text.
-         - [DwC_predict.py](fastext_interface) is the python interface to add sampledFeature field in the DwC records.  
-  3. [python](python)
-       - contains several jupyter files.
-         - [Performances.ipynb](python/Performances.ipynb) will train different models with different parameters and store data into simple_performance.csv and difficult_performance.csv in the data folder.
-         - [CollectionPredict.ipynb](python/ColletionPredict.ipynb) would train fastText models with DwC_simple.train and predict DwC collection records.
-         - **New** [dataPreprocessing.ipynb](python/dataPreprocessing.ipynb) is the example code to show how to clean up the raw data.
-         - **New** [SESAR_preprocessing.ipynb](pyhon/SESAR_preprocessing.ipynb) shows how to clean SESAR records and convert them to three different sets.
-         - **New** [openContext_preprocessing.ipynb](pyhon/openContext_preprocessing.ipynb) shows how to clean openContext records and convert them to three different sets.
-         - **New** data loading.ipynb would retrieve collections' records from Mars APIs.
-         - **New** [crossValidation.ipynb](python/crossValidation.ipynb) would use cross validation to evaluate the models' precisions and recalls.
-  4. [R folder](R)
-       - contains R code for basic data preprocessing and fastText model training.
-  5. [Collections_data](Collections_data)
-       - contains the data for other collections (SESAR, OpenContext)
-
-
+         - steve_mapping_1000.csv.
+  2. [dataPreprocessing]
+       - contains 5 files
+         - [dataPreprocessing_Full.ipynb] include all attribute, and remove one of the attribute
+         - [dataPreprocessing_No_cc.ipynb] include all attribute except collectionCode, and remove one of the attribute
+         - [dataPreprocessing_No_cc_ha.ipynb] include all attribute except collectionCode and habitat, and remove one of the attribute
+         - [dataPreprocessing_No_cc_ha_hg.ipynb] only include locality and higherClassification, and remove one the attribute
+         - [dataPreprocessing_No_cc_ha_hg_lo.ipynb] only include higherClassification
+  3. [crossValidation]
+       - get the result from 2[dataPreprocessing] and use the filename to run this script
+  4. [trans](python)
+       - contains two files.
+        -[text.py] transfer data from dataPreprocessing to format that easier read by R scrpit
+	-[exa.txt] save the result from dataPreprocessing.
+  5. [R folder](R)
+       - contains R code for output t-test result and graph.
