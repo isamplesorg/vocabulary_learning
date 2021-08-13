@@ -25,7 +25,7 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
    - higherGeography: the broad geography information.
    - locality: the location where the record was found in detail.
    - higherClassification: the taxon of the records. 
-2. Using [the new dataset](data/Raw data/steve_mapping_1000.csv) labeled by expert, Mr Steve to train the model.
+2. Using [the new dataset](data/Raw_data/steve_mapping_1000.csv) labeled by expert, Mr Steve to train the model.
    - Because of the new version of iSamples sampledFeature, we use [the new sampledFeature term](https://github.com/isamplesorg/metadata/blob/main/vocabulary/SampledFeatureDecisionTreeV20210703.pdf), please review.
    - randomly select 70% (696) records as trainSet. [steve_696.train](data/steve_696.train)
    - rest 30% (299) records as testSet. [steve_299.valid](data/steve_299.valid)
