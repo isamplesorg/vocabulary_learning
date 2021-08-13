@@ -1,14 +1,14 @@
 # Attribute_Ranking
-Find the attribute that has the most significant influence on vocabulary mapping in machine learning.
+Find the attributes that have the most significant influence on vocabulary mapping performance using machine learning.
 
 ## Introduction
-In the iSample project, we need to map the sample from SESAR、GEOME、openContext and Smithsonian into different iSamples vocabularies. We hope to map a large number of vocabularies through machine learning.  We are wondering which attribute plays the most important role in the process. We take a thousand Smithsonian records of the Smithsonian as examples. Through the manual mapping of these 995 records, we found the 5 attributes that are most likely to have an impact on machine learning. The five attributes are collectionCode, habitat, higherGeography, locality, higherClassification.
+In the iSamples project, we need to label the sample records from SESAR、GEOME、openContext and Smithsonian with different iSamples controlled vocabularies. We hope to map a large number of records through machine learning, and would like to identify the attributes that play the most important role in the prediction. We took a thousand Smithsonian records as a case study. Through a manual labeling process of 995 records (to create a training set), we found 5 attributes that were most informative to human labelers. The five attributes were collectionCode, habitat, higherGeography, locality, and higherClassification.
 ```
 -collectionCode: contains 7 different values, "Invertebrate Zoology", "Fishes", "Amphibian %26 Reptiles", "Birds", "Botany", "Entomology" and "Mammals".
--higherGeography: the broad geography information.
--habitat: the habitat of the record sample.
--locality: the location where the record was found in detail.
--higherClassification: the taxon of the records. 
+-higherGeography: contains broad geography information.
+-habitat: contains free-text habitat description of a sample.
+-locality: contains free-text location information where a sample was found in detail.
+-higherClassification contrains taxonomic ranks of a sample (scientific names from phylum to specise). 
 ```
 During this process,  we would mainly use two statistical ways to analyze. First, there are Cross-Validation and T-test. Cross-validation is for evaluating estimator performance, and T-test is for investigating how each attribute influences the result.
 
