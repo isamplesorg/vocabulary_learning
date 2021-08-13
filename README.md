@@ -10,26 +10,25 @@ In the iSamples project, we need to label the sample records from SESAR„ÄÅGEOME„
 -locality: contains free-text location information where a sample was found in detail.
 -higherClassification contrains taxonomic ranks of a sample (scientific names from phylum to specise). 
 ```
-During this process,  we would mainly use two statistical ways to analyze. First, there are Cross-Validation and T-test. Cross-validation is for evaluating estimator performance, and T-test is for investigating how each attribute influences the result.
+We recursively applied cross-validations and T-tests to select the best features, following the Recursive Feature Elimination method. Cross-validation is for estimating performances, and T-test is to detect performance differences that are statistically signficiant.
 
 ## Cross Validation
-Cross-validation, sometimes called rotation estimation or out-of-sample testing, is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. From Wikipedia (https://en.wikipedia.org/wiki/Cross-validation_(statistics))
+Cross-validation, sometimes called rotation estimation or out-of-sample testing, is any of various similar model validation techniques for assessing how the results of a statistical analysis will generalize to an independent data set. It is mainly used in settings where the goal is prediction, and one wants to estimate how accurately a predictive model will perform in practice. From Wikipedia (https://en.wikipedia.org/wiki/Cross-validation_(statistics)) We used 5-fold cross validation in this study.
 
 ## T-test
 A t-test is a type of inferential statistic used to determine if there is a significant difference between the means of two groups, which may be related in certain features. 
 From investopedia (https://www.investopedia.com/terms/t/t-test.asp)
 
-## Processes for Ranking attribute (Only for smithsonia)
-1. Using [the new dataset](data/Raw data/steve_mapping_1000.csv) labeled by expert (Mr Steve) to train the model.
-2. Use the trainSet and fastText pretrained word vector(wiki-news-300d-1M.vec) to train a fastText supervised models.
-3. Use 5-cross validation to evaluate the model.
-	- After we use 5-cross validation to evaluate the model, we will get 5 sets of data, there are precision and recall
-4. Remove one of the attribute and do the 5-cross validation again. 
-	- By removing different attributes, we will find that the accuracy and the overall change of the call; we want to remove an attribute in this way to help the whole cause the biggest change.
-5. Do t-test through original attribute set. 
-	- By t-testing the data set, we will get p-value, p-value is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis is correct. From Wikipedia (https://en.wikipedia.org/wiki/P-value)
-6. find the largest p-value and remove the attribute (large p-value means two data set are very close with each others). Start from step 3 again. Until one attribute left in the attribute set.  
-	- Until the remain attribute are not allowed to remove, when the p-value is lower than 0.05.(when the p-value lower than 0.05, it means those two data set don't have great connection) 
+## Processes for ranking attribute (Only used for smithsonia collections)
+1. Use all five attributes and \[the new dataset](data/Raw data/steve_mapping_1000.csv) labeled by expert to train the first model.
+2. Use the trainSet and fastText pretrained word vector(wiki-news-300d-1M.vec) to train the fastText supervised models.
+3. Use 5-fold cross validation to estimate the model performance. The average precision and recall obtained from this step is the **reference performance** to which the subsequent models will be compared. 
+4. Remove one attribute (A_i, i in \[1-5]) at a time from the five attributes, do step 5.
+5. Use the remaining attributes, train and build another model, and do 5-fold cross validation again. 
+	- Each 5-fold cross validation produces 5 sets of precision and recall scores
+	- Use T-tests to decide if precision and recall scores from one model is really different from the **reference** model 
+	- Through the performance comparisons, identify the attribute (A_i) that has the least impact on the model performance (i.e., removing the attribute did not result in a significant performance drop, that is, the T-test gives the largest p-value). Remove this attribute and repeat step 5. 
+6. Stop when no attribute can be dropped without signficiantly reducing model performance.  
 
 ## Prerequisites
   Download pretrained word vector file "wiki-news-300d-1M.vec.zip" from https://fasttext.cc/docs/en/english-vectors.html
