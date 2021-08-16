@@ -35,22 +35,20 @@ From investopedia (https://www.investopedia.com/terms/t/t-test.asp)
   And put "wiki-news-300d-1M.vec" file in the data folder
   (Alternative: "wiki-new-300d-1M-subword.vec.zip")
 
-## FastText folders 
-  1. [data folder](data)
+## Attribute_rank folders 
+  [data]
        - contains all data we used. 
          - steve_mapping_1000.csv.
-  2. [dataPreprocessing](dataPreprocessing)
-       - contains 5 files
+  [dataPreprocessing]
+       - contains 4 files
          - [dataPreprocessing_Full.ipynb] include all attribute, and remove one of the attribute
          - [dataPreprocessing_No_cc.ipynb] include all attribute except collectionCode, and remove one of the attribute
          - [dataPreprocessing_No_cc_ha.ipynb] include all attribute except collectionCode and habitat, and remove one of the attribute
          - [dataPreprocessing_No_cc_ha_hg.ipynb] only include locality and higherClassification, and remove one the attribute
-         - [dataPreprocessing_No_cc_ha_hg_lo.ipynb] only include higherClassification
-  3. [crossValidation](crossValidation)
+  [crossValidation]
        - get the result from 2[dataPreprocessing] and use the filename to run this script
-  4. [trans](trans)
-       - contains two files.
-        -[text.py] transfer data from dataPreprocessing to format that easier read by R scrpit
-	-[exa.txt] save the result from dataPreprocessing.
-  5. [R folder](R)
-       - contains R code for output t-test result and graph.
+  [R folder](R)
+       - contains 3 files
+       	 - [precision.R] output picture of precision
+	 - [recall.R] output picture of recall
+	 - [t-test.R] output txt file of t-test
