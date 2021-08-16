@@ -14,6 +14,11 @@ This repository currently focuses on "SampledFeature". For SESAR, GEOME and open
 fastText is an open-source, free, lightweight library that allows users to learn text representations and text classifiers. It works on standard, generic hardware. Models can later be reduced in size to even fit on mobile devices. To learn about fastText, please explore the link: 
 https://fasttext.cc/. (**NOTICE**: the fastText library might reture the same precision and recall when you use the "test" method to verify the test set. fastText library might have this bug. And fastText only calculates the micro average precision and recall.)
 
+## Prerequisites
+  Download pretrained word vector file "crawl_300d-2M-subword.zip" from https://fasttext.cc/docs/en/english-vectors.html
+  And put "crawl-300d-2M-subword.vec" file in the data folder
+  (Alternative: "wiki-new-300d-1M-subword.vec.zip")
+
 ## DataSet
 Currently, the project uses Smithsonian biodiversity data published as a Darwin Core Archive (DwC-A), which is a standardized format for sharing biodiversity data as a set of one or more data tables. The core data table contains 194517 records and 72 fields.
 Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
@@ -45,18 +50,13 @@ Data link: https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample
    - **New result:** The results show fasttext model could predict all collections' records with 95% average probability and more. [Probability results for the different collections](data/Collection_result/Sum_Result.csv)
 
 ## Processes for SESAR and openContext.
-1. Use data loading.ipynb to retrieve SESAR records from MARS. we would get [SESAR_5000_core.csv](Collections_data/SESAR_5000_core.csv) and [SESAR_5000_original.csv](Collections_data/SESAR_5000_orginal.csv). The same steps for openContext.
+1. Use data loading.ipynb to retrieve SESAR records from MARS. we would get [SESAR_5000_core.csv](Collections_data/SESAR_5000_core.csv) and [SESAR_5000_original.csv](Collections_data/SESAR_5000_orginal.csv). The same steps for openContext. The data files are already stored in the Collection_data folder. The users could directly run the following steps.
 2. Use SESAR_preprocessing.ipynb to clean the SESAR records and convert them to different sets. [cleanedSESAR_materialType.txt](Collections_data/cleanedSESAR_materialType.txt), [cleanedSESAR_sampeldFeature.txt](Collections_data/cleanedSESAR_sampeldFeature.txt) and [cleanedSESAR_specimenType.txt](Collections_data/cleanedSESAR_specimenType.txt).
 3. [SESAR_preprocessing.ipynb](pyhon/SESAR_preprocessing.ipynb) and [openContext_preprocessing.ipynb](pyhon/openContext_preprocessing.ipynb) clean the records and converts data to fastText format. The files also draw the graphes of records' attributes distribution and iSamples control vocabularies's distributions. 
    - **Result for SESAR:** The SESAR collection is sparse data. Only few attributes could be used for fastText. And, the current records transformers based on keywords rules. Therefore, the result precision and recall are great. 
    - **Result for openContext:** The openContext original data is pretty straightful and the sampled feature for openContext is the same value, "Site of past human activities". The current iSamples core records of openContext are based on only one attribuate, "item category". Therefore, when we use fastText to verify the control vocabularies, the precision and recall are 100%.
 4. Use crossValidation.ipynb to evaluate the models' precisions and recalls and draw the graphs of precision and recall.
 
-
-## Prerequisites
-  Download pretrained word vector file "crawl_300d-2M-subword.zip" from https://fasttext.cc/docs/en/english-vectors.html
-  And put "crawl-300d-2M-subword.vec" file in the data folder
-  (Alternative: "wiki-new-300d-1M-subword.vec.zip")
 
 ## FastText folders 
   1. [data folder](data)
